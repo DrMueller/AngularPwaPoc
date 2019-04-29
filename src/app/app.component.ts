@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SwPush } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,7 @@ import { SwPush } from '@angular/service-worker';
 export class AppComponent {
   public promptEvent: any;
 
-  public constructor(private pushService: PushNotificationsService, private swPush: SwPush) {
+  public constructor() {
     window.addEventListener('beforeinstallprompt', event => {
       this.promptEvent = event;
     });
@@ -25,8 +24,5 @@ export class AppComponent {
       tag: 'Test',
       vibrate: [200, 100, 200]
     });
-
-    const notification2 = new Notification('Hello Test');
-
   }
 }

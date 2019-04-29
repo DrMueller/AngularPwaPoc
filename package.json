@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start-prod-local": "http-server -c-1 dist\\AngularPwaPoc\\ -p 8081",
+    "start-prod-local": "http-server -c-1 dist//AngularPwaPoc -p 8082",
     "build-prod": "ng build --prod",
     "build-and-serve": "npm run build-prod && npm run start-prod-local"
   },
